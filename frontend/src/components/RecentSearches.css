@@ -1,0 +1,72 @@
+.recent-searches {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .recent-searches {
+  background: #2d3748;
+  color: white;
+}
+
+.recent-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+body.dark .recent-title {
+  color: white;
+}
+
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.recent-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+body.dark .recent-item {
+  background: #4a5568;
+  border-color: #718096;
+  color: white;
+}
+
+.recent-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+body.dark .recent-item:hover {
+  background: #718096;
+}
+
+.recent-city {
+  font-weight: 500;
+}
+
+.recent-temp {
+  color: #667eea;
+  font-weight: 600;
+}
+
+body.dark .recent-temp {
+  color: #a3bffa;
+}

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: weather-app-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: 74b6ddcdd4b3f769659c5f5cc208b858
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

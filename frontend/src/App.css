@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+  color: #fff;
+}
+
+body.dark .app-container {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+}
+
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark .app-header h1 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+body.dark .app-header p {
+  color: #bbb;
+}
+
+.main-content {
+  margin-bottom: 3rem;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #c62828;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.dark .error-message {
+  background: rgba(198, 40, 40, 0.2);
+  color: #ff6b6b;
+  border-left-color: #ff6b6b;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark .app-footer {
+  color: #bbb;
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-footer p {
+  margin: 0.5rem 0;
+}
+
+/* Dark Mode */
+body.dark .app-container {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark .search-input-group {
+  background: #2d3748;
+}
+
+body.dark .search-input {
+  color: white;
+  background: transparent;
+}
+
+body.dark .search-icon {
+  color: #a0aec0;
+}
+
+body.dark .current-weather-card {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+body.dark .forecast-container,
+body.dark .favorites-container {
+  background: #2d3748;
+  color: white;
+}
+
+body.dark .forecast-card {
+  background: #4a5568;
+}
+
+body.dark .forecast-date,
+body.dark .forecast-time {
+  color: #cbd5e0;
+}
+
+body.dark .forecast-temp {
+  color: white;
+}
+
+body.dark .favorite-card {
+  background: #4a5568;
+}
+
+body.dark .favorite-city {
+  color: white;
+}
+
+body.dark .favorite-desc {
+  color: #cbd5e0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(30deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.current-weather-card,
+.forecast-container,
+.favorites-container,
+.recent-searches,
+.weather-alerts {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.forecast-card {
+  animation: slideIn 0.3s ease-out;
+}
+
+.forecast-card:nth-child(2) { animation-delay: 0.1s; }
+.forecast-card:nth-child(3) { animation-delay: 0.2s; }
+.forecast-card:nth-child(4) { animation-delay: 0.3s; }
+.forecast-card:nth-child(5) { animation-delay: 0.4s; }
+
+.favorite-card {
+  animation: slideIn 0.3s ease-out;
+}
+
+.favorite-card:nth-child(1) { animation-delay: 0.1s; }
+.favorite-card:nth-child(2) { animation-delay: 0.2s; }
+.favorite-card:nth-child(3) { animation-delay: 0.3s; }
+.favorite-card:nth-child(4) { animation-delay: 0.4s; }
