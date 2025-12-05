@@ -18,12 +18,15 @@ A full-stack weather application with real-time forecasts, location detection, a
 
 ## 🖼️ Screenshots
 
-![Dashboard](<img width="1883" height="1002" alt="Screenshot 2025-12-05 143233" src="https://github.com/user-attachments/assets/143da058-e6e1-427a-be32-ab9be2d0a70f" />
-)
-![Forecast](<img width="1883" height="997" alt="Screenshot 2025-12-05 143249" src="https://github.com/user-attachments/assets/84ae2cad-262c-49f1-8910-b6287ed0ea0a" />
-)
-![Mobile View](<img width="596" height="869" alt="Screenshot 2025-12-05 143407" src="https://github.com/user-attachments/assets/6c2de110-2c9b-44ec-9df4-68227db926ae" />
-)
+### Dashboard
+<img width="1883" height="1002" alt="Screenshot 2025-12-05 143233" src="https://github.com/user-attachments/assets/143da058-e6e1-427a-be32-ab9be2d0a70f" />
+
+### Forecast
+<img width="1883" height="997" alt="Screenshot 2025-12-05 143249" src="https://github.com/user-attachments/assets/84ae2cad-262c-49f1-8910-b6287ed0ea0a" />
+
+### Mobile View
+<img width="596" height="869" alt="Screenshot 2025-12-05 143407" src="https://github.com/user-attachments/assets/6c2de110-2c9b-44ec-9df4-68227db926ae" />
+
 
 ## 🏗️ Architecture
 ```
