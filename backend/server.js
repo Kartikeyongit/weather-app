@@ -13,19 +13,9 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.'
 });
 
-const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'https://your-frontend-domain.vercel.app', // Will update after deployment
-    'https://weather-app-frontend.vercel.app' // Example
-  ],
-  credentials: true
-};
-
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(cors(corsOptions));
 
 // Routes
 app.use('/api/weather', weatherRoutes);
